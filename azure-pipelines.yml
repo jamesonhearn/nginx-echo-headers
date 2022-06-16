@@ -5,13 +5,6 @@ pool:
   name: 'agentpool'
 
 steps:
-- task: Docker@2
-  inputs:
-    containerRegistry: 'ado-to-acr'
-    repository: 'nginx-echo-headers'
-    command: 'buildAndPush'
-    Dockerfile: 'Dockerfile'
-    tags: 'latest'
 - task: Kubernetes@1
   inputs:
     connectionType: 'Azure Resource Manager'
